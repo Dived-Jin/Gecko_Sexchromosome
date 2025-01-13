@@ -1,5 +1,7 @@
 # 02.AlignmentLAST
-This folder includes two pipelines that help us to get alignment and integrate multi-species alignment results:
+This folder includes two pipelines that help us to get alignment and integrate multi-species alignment results.
+
+The abbreviations in the document are represented the species name, which is found in [species.txt](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/af3026331796bd45a6fcf1bb4dc1415eb5a400ed/species.txt).
 
 # (1) a.LAST_alignment.sh:
 the script is used to get whole genome or chromosome alignment and generate the NET and MAF file.
