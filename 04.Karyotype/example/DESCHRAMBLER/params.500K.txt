@@ -1,0 +1,22 @@
+# Reference species
+REFSPC=CORSAR
+
+# Output directory
+OUTPUTDIR=Gekko.500K
+
+# Block resolution (bp)
+RESOLUTION=500000
+
+# Newick tree file
+# Refer to the sample file 'tree.txt'.
+TREEFILE=Gekko.nwk
+
+# Minimum adjacency scores
+MINADJSCR=0.0001
+
+# Config and make files for syntenic fragment construction
+# Refer to the sample files 'config.SFs' and 'Makefile.SFs'.
+# You need to change settings in the sample configuration file (config.SFs) according to your data
+# You don't need to change anything in the Makefile.SFs.
+CONFIGSFSFILE=config.SFs
+MAKESFSFILE=Makefile.SFs

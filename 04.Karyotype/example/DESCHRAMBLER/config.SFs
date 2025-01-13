@@ -1,0 +1,38 @@
+# path of a net files
+>netdir
+/hwfssz2/zebra_bgiseq500/yjy_data/Admin/Users/jinjiazheng/Gecko_Sexchromosome/15.Phylogen_karotype/Karyotype/corsar/DESCHRAMBLER.CORSAR_ref/
+
+# path of a chain files
+>chaindir
+/hwfssz2/zebra_bgiseq500/yjy_data/Admin/Users/jinjiazheng/Gecko_Sexchromosome/15.Phylogen_karotype/Karyotype/corsar/DESCHRAMBLER.CORSAR_ref
+
+# species-name tag1 tag2
+# tag1 (0: ref-species, 1: descendents, 2: outgroup)
+# tag2 (1: chromosome assembly, 0: others)
+>species
+CORSAR 0 1
+CORCIL 1 0
+PYGNIG 1 0
+NEPLEV 1 0
+EUBMAC 1 0
+COLBRE 1 0
+SPHMIN 1 0
+ARIPRA 1 0
+THERAP 1 0
+PHYWIR 1 0
+TARMAU 1 0
+PHELAT 1 0
+PARSTU 1 0
+CHRMAR 1 0
+GEHMUT 1 0
+HEMMAB 1 0
+HEMFRE 1 0
+HETBIN 1 0
+GEKJAP 1 0
+LACAGI 2 0
+THAELE 2 0
+
+# block resolution (bp): DO NOT CHANGE
+>resolution
+<resolutionwillbechanged>
+
