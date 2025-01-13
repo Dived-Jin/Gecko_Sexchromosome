@@ -1,6 +1,8 @@
 # 04.Karyotype
 This folder is used for ancestral karyotype analysis.
 
+The abbreviations in the document are represented the species name, which is found in [species.txt](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/af3026331796bd45a6fcf1bb4dc1415eb5a400ed/species.txt).
+
 ## (1) a.DESCHRAMBLER.sh
 The command is used to identify the synteny fragment in all species. 
 ```
