@@ -1,6 +1,8 @@
 # 01.Identify_sexchromosome
 This pipeline is used to identify sex chromosomes.
-`The abbreviations in the document are represented the species name, which is found in [species.txt](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/af3026331796bd45a6fcf1bb4dc1415eb5a400ed/species.txt).`
+
+The abbreviations in the document are represented the species name, which is found in [species.txt](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/af3026331796bd45a6fcf1bb4dc1415eb5a400ed/species.txt).
+
 ## (1) a.depth_method.sh
 the script is used to identify sex chromosomes  by male and female depth：
 ```
@@ -12,7 +14,7 @@ used: sh a.depth_method.sh  <genome> <sex type> <male_fq1> <male_fq2> <female_fq
 In our work, used this script as following:
         sh a.depth_method.sh correlophus_sarasinorum.ZW.fasta ZW male_1.fq.gz male_2.fq.gz female_1.fq.gz female_2.fq.gz
         The major file includes:
-        - FMmerge.50k.cov.ratio.class: The cluster result file includes all scaffold. such as example/FMmerge.50k.cov.ratio.class
+        - FMmerge.50k.cov.ratio.class: The cluster result file includes all scaffolds. such as example/FMmerge.50k.cov.ratio.class
           it means that the whole scaffold is clustered to XZ or YW or autosome (A) if a line begins with >, includes eight columns: scaffold id, scaffold length, XZ length, ratio, YW length, ratio, A length, ratio, cluster result. 
           it means that the special region is clustered to XZ or YW or autosome (A) if a line doesn't begin with >, includes fifteen columns: scaffold id, start site, end site, male sequence depth (median), male sequence depth (mean), male sequence coverage, female sequence depth (median), female sequence depth (mean), female sequence coverage, normalized male depth (nmdep), normalized female depth(nfdep), nfdep/nmdep or nmdep/nfdep, male coverage ratio, female  coverage ratio.
         - *.pdf: the figure of depth. such as example/chrZ.txt.norm.pdf
@@ -31,7 +33,7 @@ In our work, used this script as following:
 ```
    
 ## (3) c.filter_smallscaffold.sh
-the script is used to filter the false positive from Fst or depth methods result based on comparing the interaction strength between the small scaffold and sex chromosome or autosome.
+the script is used to filter the false positive from Fst or depth methods results based on comparing the interaction strength between the small scaffold and sex chromosome or autosome.
 ```
 used: sh c.filter_smallscaffold.sh <larger_sex_chromsomid_list> <Auotosme_id_list> <small_scaffold_list> <HiC_strength_maxtir> <HiC_windows_bed> <out_file>
         - larger_sex_chromsomid_list: sex chromosome list with bed format. such as example/Sextrue.bed
@@ -43,3 +45,4 @@ used: sh c.filter_smallscaffold.sh <larger_sex_chromsomid_list> <Auotosme_id_lis
     In our work, used this script as following:
         used: sh  c.filter_smallscaffold.sh Sextrue.bed Autotrue.bed unconfirm.bed aristelliger_praesignis.ZW.bsorted.pairs.gz.100kb.cool.KR.hicpro aristelliger_praesignis.ZW.hicpro.100kb.bed  SmallSex.100kb.strength.bed
 ```
+
