@@ -6,7 +6,7 @@ Nowdir=`pwd`
 
 ###############
 Grimmpath=""
-binpath= "" #"/hwfssz2/zebra_bgiseq500/yjy_data/Admin/Users/jinjiazheng/Gecko_Sexchromosome/08.Karotype_v2/c.anges.CORSAR_Divergencev1/500k_modify/plota/plotlinear/grimm/bin"
+binpath= "" 
 ######
 function Creatdir(){
     dirm=$1
