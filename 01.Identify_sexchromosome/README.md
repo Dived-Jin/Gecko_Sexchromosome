@@ -3,7 +3,7 @@ This pipeline is used to identify sex chromosomes by following two methods:
 
 ## (1) a.depth_method.sh
 the script is used to identify sex chromosomes  by male and female depth 
-used: sh a.depth_method.sh  <genome> <sex type> <male_fq1> <male_fq2> <female_fq1> <female_fq2>
+```used: sh a.depth_method.sh  <genome> <sex type> <male_fq1> <male_fq2> <female_fq1> <female_fq2>
         - genome: genome file with fasta format.
         - sex type: sex determinate system: XY or ZW 
         - male_fq1, male_fq2: Genome Resequence data with fastq formate of male.
@@ -16,19 +16,21 @@ In our work, used this script as following:
           it means that the special region is clustered to XZ or YW or autosome (A) if a line doesn't begin with >, includes fifteen columns: scaffold id, start site, end site, male sequence depth (median), male sequence depth (mean), male sequence coverage, female sequence depth (median), female sequence depth (mean), female sequence coverage, normalized male depth (nmdep), normalized female depth(nfdep), nfdep/nmdep or nmdep/nfdep, male coverage ratio, female  coverage ratio.
         - *.pdf: the figure of depth. such as example/chrZ.txt.norm.pdf
         - PAR.bed and nonPAR.bed: sex chromosome region with bed format. such as example/nonPARW.bed, example/nonPARZ.bed, example/PAR.bed
+```
 
 ## (2) b.Fst_method.sh
 the script is used to identify sex chromosomes by Fst.
-used: sh b.Fst_method.sh <genome> <special_chr> <sample.list>
+```used: sh b.Fst_method.sh <genome> <special_chr> <sample.list>
         - genome: genome file with fasta format.
         - special_chr: the id of candidate.
         - sample.list: the list file of genome resequencing data, with three columns (sample id, fastq1 and fastq2 ), the format same with example/sample.list
 In our work, used this script as following:
         such as: sh b.Fst_method.sh thecadactylus_rapicauda.ZW.fasta chr1 sample.list
-    
+```
+   
 ## (3) c.filter_smallscaffold.sh
 the script is used to filter the false positive from Fst or depth methods result based on comparing the interaction strength between the small scaffold and sex chromosome or autosome.
-    used: sh c.filter_smallscaffold.sh <larger_sex_chromsomid_list> <Auotosme_id_list> <small_scaffold_list> <HiC_strength_maxtir> <HiC_windows_bed> <out_file>
+```used: sh c.filter_smallscaffold.sh <larger_sex_chromsomid_list> <Auotosme_id_list> <small_scaffold_list> <HiC_strength_maxtir> <HiC_windows_bed> <out_file>
         - larger_sex_chromsomid_list: sex chromosome list with bed format. such as example/Sextrue.bed
         - Auotosme_id_list: autosome list list with bed format. such as example/Autotrue.bed
         - small_scaffold_list: small scaffold list with bed format. such as example/unconfirm.bed
@@ -37,3 +39,4 @@ the script is used to filter the false positive from Fst or depth methods result
         - out_file: output file. This file includes eight columns: scaffold id, max interaction strength with sex, interaction strength, max interaction strength with autosome. interaction strength, random sum test p-value, sex_strength/autosome_strength, raw confirmed. example/SmallSex.100kb.strength.bed
     In our work, used this script as following:
         used: sh  c.filter_smallscaffold.sh Sextrue.bed Autotrue.bed unconfirm.bed aristelliger_praesignis.ZW.bsorted.pairs.gz.100kb.cool.KR.hicpro aristelliger_praesignis.ZW.hicpro.100kb.bed  SmallSex.100kb.strength.bed
+```
