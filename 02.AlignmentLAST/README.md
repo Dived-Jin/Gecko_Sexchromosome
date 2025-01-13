@@ -3,6 +3,7 @@ This folder includes two pipelines that help us to get alignment and integrate m
 
 # (1) a.LAST_alignment.sh:
 the script is used to get whole genome or chromosome alignment and generate the NET and MAF file.
+```
 used : sh a.LAST_alignment.sh <genome1.fa> <genome2.fa>
     - genome1.fa: fasta file of target species or chromosome. The repeat sequences had been masked.
     - genome2.fa: fasta file of query species or chromosome. The repeat sequences had been masked.
@@ -13,9 +14,11 @@ used : sh a.LAST_alignment.sh <genome1.fa> <genome2.fa>
         - query.net & target.net the alignment files with NET format.
         - out.Net2maf.add.maf the alignment file with MAF format.
         - target.net.filt.aln and out.Net2maf.add.maf.aln :  The NET and MAF file transformed to an alignment txt file with eight columns: target_scaffold_id, chain, target_start_site, target_end_site, query_scaffold_id, chain, query_start_site, query_end_site, such as example/target.net.filt.aln, example/out.Net2maf.add.maf.aln
+```
 
 ## (2) b.LAST_multiz.sh
 this fule is used to merge MAF files.
+```
 used: sh b.LAST_multiz.sh <maf1list> <Refspecies> <merge_stepfile>
         - maf1list: the text file with three columns: species_full_name, species_abbreviation, mafpath
             for example:  pygopus_nigriceps.XY  PYGNIG maf1
@@ -25,3 +28,4 @@ used: sh b.LAST_multiz.sh <maf1list> <Refspecies> <merge_stepfile>
         - merge_stepfile: the text file with four columns: maf1_path, path2_path, outmaf_name, commandline_file; such as example/merge_step.txt 
 In our work, used this script as following:
         sh b.LAST_multiz.sh example/mafpath.txt CORSAR example/merge_step.txt
+```
