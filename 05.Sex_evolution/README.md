@@ -1,6 +1,8 @@
 # 05.Sex_evolution
 This folder includes the pipelines used to estimate male mutation bias & sex divergence time.
 
+The abbreviations in the document are represented the species name, which is found in [species.txt](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/af3026331796bd45a6fcf1bb4dc1415eb5a400ed/species.txt).
+
 ## (1)a.Sexchromsome_alignment_merge.sh
 The case that the sex chromosome aligned to other homologues in other species.
 ```
