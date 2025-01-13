@@ -2,8 +2,9 @@
 This pipeline is used to identify sex chromosomes by following two methods:
 
 ## (1) a.depth_method.sh
-the script is used to identify sex chromosomes  by male and female depth 
-```used: sh a.depth_method.sh  <genome> <sex type> <male_fq1> <male_fq2> <female_fq1> <female_fq2>
+the script is used to identify sex chromosomes  by male and female depth：
+```
+used: sh a.depth_method.sh  <genome> <sex type> <male_fq1> <male_fq2> <female_fq1> <female_fq2>
         - genome: genome file with fasta format.
         - sex type: sex determinate system: XY or ZW 
         - male_fq1, male_fq2: Genome Resequence data with fastq formate of male.
@@ -20,7 +21,8 @@ In our work, used this script as following:
 
 ## (2) b.Fst_method.sh
 the script is used to identify sex chromosomes by Fst.
-```used: sh b.Fst_method.sh <genome> <special_chr> <sample.list>
+```
+used: sh b.Fst_method.sh <genome> <special_chr> <sample.list>
         - genome: genome file with fasta format.
         - special_chr: the id of candidate.
         - sample.list: the list file of genome resequencing data, with three columns (sample id, fastq1 and fastq2 ), the format same with example/sample.list
@@ -30,7 +32,8 @@ In our work, used this script as following:
    
 ## (3) c.filter_smallscaffold.sh
 the script is used to filter the false positive from Fst or depth methods result based on comparing the interaction strength between the small scaffold and sex chromosome or autosome.
-```used: sh c.filter_smallscaffold.sh <larger_sex_chromsomid_list> <Auotosme_id_list> <small_scaffold_list> <HiC_strength_maxtir> <HiC_windows_bed> <out_file>
+```
+used: sh c.filter_smallscaffold.sh <larger_sex_chromsomid_list> <Auotosme_id_list> <small_scaffold_list> <HiC_strength_maxtir> <HiC_windows_bed> <out_file>
         - larger_sex_chromsomid_list: sex chromosome list with bed format. such as example/Sextrue.bed
         - Auotosme_id_list: autosome list list with bed format. such as example/Autotrue.bed
         - small_scaffold_list: small scaffold list with bed format. such as example/unconfirm.bed
