@@ -2,7 +2,7 @@
 This repository includes some pipelines used in Gecko genome study, mainly for the phylogeny and the sex chromosome analysis.
 
 ## sex chromosome identify
-This pipeline (in []()) includes three pipelines:
+This pipeline (in [01.Identify_sexchromosome]() includes three pipelines:
 1. Identify the sex chromosome by the depth method. ([a.]())
 2. Identify the sex chromosome by the Fst method. ([b.]())
 3. Filter small scaffolds. (in c.)
@@ -29,7 +29,7 @@ This pipeline (in []()) includes four steps:
 
 ## Sex chromosome evolution 
 This pipeline (in []()) includes five pipelines:
-1. The case that sex chromsome alignment with homologues chromosome. ([a.]())
+1. The case that the sex chromosome is aligned to the  homologous chromosome. ([a.]())
 2. The alignment filter ([b.]())
 3. The male mutation bias estimate. ([c.]())
 4. The Sex chromosome divergence time estimate. ([d.]())
@@ -39,4 +39,4 @@ This pipeline (in []()) includes five pipelines:
 1. The command line of geneconversion. ([]())
 2. Generated the Hi-C strength matrix. ([]()) 
 3. The dn, ds of gametologes estimate. ([]()) 
-4. Gene expression leve calculate. ([]())
+4. Gene expression level calculate. ([]())
