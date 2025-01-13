@@ -4,7 +4,7 @@ scriptp=`dirname "$(realpath $0)"`
 binpath="$scriptp/bin"
 DESCHRAMBLER="" # download frome https://github.com/jkimlab/DESCHRAMBLER.git
 ############# Raw input
-divergence_tree=""
+divergence_tree="" 
 paremater_file=""
 Makefile=""
 config=""
