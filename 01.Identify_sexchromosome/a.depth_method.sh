@@ -2,6 +2,7 @@
 #######bin path
 scriptp=`dirname "$(realpath $0)"`
 binpath="$scriptp/bin"
+Toolspath="" # the path of samools, bedtools, bwa
 
 ############# Raw input
 geneome=$1
@@ -12,22 +13,22 @@ female=$5
 female=$6
 
 ############# alignment
-bwa index -p $genome $genome #build index #baw v0.7.17
-bwa mem $genome $malefq1 $malefq2 -t 5 |samtools view -@ 5 -b - |samtools sort -@ 5 - >$genome.male.sort.bam # male WGS alignment # samtools v1.11, bwa V0.7.17 
-bwa mem $genome $femalefq1 $femalefq2 -t 5 |samtools view -@ 5 -b - |samtools sort -@ 5 - >$genome.female.sort.bam # female WGS alignment
+$Toolspath/bwa index -p $genome $genome #build index #baw v0.7.17
+$Toolspath/bwa mem $genome $malefq1 $malefq2 -t 5 |samtools view -@ 5 -b - |samtools sort -@ 5 - >$genome.male.sort.bam # male WGS alignment # samtools v1.11, bwa V0.7.17 
+$Toolspath/bwa mem $genome $femalefq1 $femalefq2 -t 5 |samtools view -@ 5 -b - |samtools sort -@ 5 - >$genome.female.sort.bam # female WGS alignment
 
 ############extract sequence
-samtools faidx $genome
-bedtools makewindows -g $genome.fai -w 50000  >chr.50k.bed ## split windown with 50kb #bedtools v2.29.2
+$Toolspath/samtools faidx $genome
+$Toolspath/bedtools makewindows -g $genome.fai -w 50000  >chr.50k.bed ## split windown with 50kb #bedtools v2.29.2
 awk -F " " '{print $1"\t0\t"$2}' $genome.fai >chr.region.bed
-samtools depth -b chr.region.bed $genome.male.sort.bam |gzip >male.depth.bed.gz # male sequence depth file of all site
-samtools depth -b chr.region.bed $genome.female.sort.bam |gzip >female.depth.bed.gz # female sequence depth file all site
+$Toolspath/samtools depth -b chr.region.bed $genome.male.sort.bam |gzip >male.depth.bed.gz # male sequence depth file of all site
+$Toolspath/samtools depth -b chr.region.bed $genome.female.sort.bam |gzip >female.depth.bed.gz # female sequence depth file all site
 zcat male.depth.bed.gz | awk '{print $1"\t"$2-1"\t"$2"\t"$3}' | awk '$4>0' |gzip >male.depth.bed.filer.gz
 zcat female.depth.bed.gz | awk '{print $1"\t"$2-1"\t"$2"\t"$3}' | awk '$4>0' |gzip >female.depth.bed.filer.gz
 
 #####normalized the sequence depth by 50kb windowns
-zcat male.depth.bed.filer.gz| /share/app/bedtools/2.29.2/bin/bedtools map -a chr.50k.bed -b - -c 4 -o median,mean,count >male.50k.cov
-zcat female.depth.bed.filer.gz| /share/app/bedtools/2.29.2/bin/bedtools map -a chr.50k.bed -b - -c 4 -o median,mean,count >female.50k.cov
+zcat male.depth.bed.filer.gz| $Toolspath/bedtools map -a chr.50k.bed -b - -c 4 -o median,mean,count >male.50k.cov
+zcat female.depth.bed.filer.gz| $Toolspath/bedtools map -a chr.50k.bed -b - -c 4 -o median,mean,count >female.50k.cov
 paste male.50k.cov female.50k.cov | cut -f1-6,10- > FMmerge.50k.cov ### merge male and female sequence depth
 
 ####calculate the sequence depth of male and female respectivaly.
