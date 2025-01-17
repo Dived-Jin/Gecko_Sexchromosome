@@ -31,7 +31,7 @@ with open(faiFile) as f:
 		line = line.rstrip()
 		tmp = line.split('\t')
 		scaf = tmp[0]
-		l = int(tmp[2])
+		l = int(tmp[1])
 		lenDic[scaf] = l
 
 def output(scaf, body, count):
