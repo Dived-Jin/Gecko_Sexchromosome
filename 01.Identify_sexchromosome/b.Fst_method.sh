@@ -34,7 +34,7 @@ do
     mkdir bcf 
     awk '{print $1"\t"$2}' ../$genome.fai | while read chrs length 
     do
-        $Toolspath/freebayes --bam $sampleid.sort.rmdup.addSample.bam --region $chrs:1-$length -f $genome |$Toolspath/bcftools view --no-version -Oz -o >bcf/${chrs}.bcf.gz #call SNP & INDEL by freebayes V1.1.0; bedtools V1.11
+        $Toolspath/freebayes --bam $sampleid.sort.rmdup.addSample.bam --region $chrs:1-$length -f $genome |$Toolspath/bcftools view --no-version -Oz -o bcf/${chrs}.bcf.gz #call SNP & INDEL by freebayes V1.1.0; bedtools V1.11
         $Toolspath/bcftools index bcf/${chrs}.bcf.gz
     done
     cd ..
