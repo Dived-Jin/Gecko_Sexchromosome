@@ -17,8 +17,6 @@ This pipeline (in [03.phylogeny](https://github.com/Dived-Jin/Gecko_Sexchromosom
 1. The alignment region extracted from whole genome alignment. ([a.get_alignment.sh](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/eb978283d0cedf755deb868efd83e29570673ffb/03.phylogeny/a.get_alignment.sh))
 2. The phylogeny constructed. ([b.phylogeny.sh](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/eb978283d0cedf755deb868efd83e29570673ffb/03.phylogeny/b.phylogeny.sh))
 3. The species divergence time estimate. ([c.divergence.sh](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/eb978283d0cedf755deb868efd83e29570673ffb/03.phylogeny//c.divergence.sh))
-4. The topology ratio of each node calculate. ([d.discovista.sh](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/eb978283d0cedf755deb868efd83e29570673ffb/03.phylogeny/03.phylogeny/d.discovista.sh))
-5. The introgression and ILS estimate. ([e.Quible.sh](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/eb978283d0cedf755deb868efd83e29570673ffb/03.phylogeny/03.phylogeny//e.Quible.sh))
 
 ## Ancestral karyotype analysis
 This pipeline (in [04.Karyotype](https://github.com/Dived-Jin/Gecko_Sexchromosome/tree/eb978283d0cedf755deb868efd83e29570673ffb/04.Karyotype)) includes four steps:
@@ -40,6 +38,7 @@ This pipeline (in [05.Sex_evolution](https://github.com/Dived-Jin/Gecko_Sexchrom
 2. Generated the Hi-C strength matrix. ([HiC_strength_calculate.sh](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/eb978283d0cedf755deb868efd83e29570673ffb/others/HiC_strength_calculate.sh)) 
 3. The dn, ds of gametologes estimate. ([Gametologues_dnds.sh](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/eb978283d0cedf755deb868efd83e29570673ffb/others/Gametologues_dnds.sh)) 
 4. Gene expression level calculate. ([RNAseq_TMPstat.sh](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/eb978283d0cedf755deb868efd83e29570673ffb/others/RNAseq_TMPstat.sh))
+5. Non-random sex chromosome evolution test([nonRandom_sexchromosome_evolution.sh](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/eb978283d0cedf755deb868efd83e29570673ffb/others/nonRandom_sexchromosome_evolution.sh))
 
 ## Note
 The Raw data and control file that been used in our work can download from figureshare ([XXXX](XXXXX))
