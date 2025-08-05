@@ -54,7 +54,7 @@ $Toolspath/bcftools index $genome.group.bcf.gz
 ######### Calculate Fst
 grep -w -i "^male" $samplelsf |awk '{print $1}' >male_group.txt
 grep -w -i "^female" $samplelsf |awk '{print $1}' >female_group.txt
-$Toolspath/vcftools --gzvcf $genome.group.bcf.gz --recode-INFO-all --max-alleles 2 --min-alleles 2 --minDP 3 --minQ 30 --recode --remove-indels --out $genome.group.vcf.filter 
+$Toolspath/vcftools --gzvcf $genome.group.bcf.gz --recode-INFO-all --max-alleles 2 --min-alleles 2 --minDP 10 --minQ 30 --recode --remove-indels --out $genome.group.vcf.filter 
 $Toolspath/vcftools --vcf $genome.genotypes.vcf.filter.recode.vcf -weir-fst-pop female_group.txt --weir-fst-pop male_group.txt --out Bin.500K --fst-window-size 500000 # Calculate Fst with 500kb length.
 grep "chr" Bin.500K.windowed.weir.fst|sed 's/chr//' >all.500k.txt
 Rscript $binpath/Fstplot_v2.r all.500k.txt $Special_chr Bin.500K.windowed.weir.fst.pdf Bin.500K.windowed.weir.fst.special.pdf
