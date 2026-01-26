@@ -1,17 +1,17 @@
 # 05.Sex_evolution
 This folder includes the pipelines used to estimate male mutation bias & sex divergence time.
 
-The abbreviations in the document are represented the species name, which is found in [species.txt](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/af3026331796bd45a6fcf1bb4dc1415eb5a400ed/species.txt).
+The abbreviations in the document represent the species name, which is found in [species.txt](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/af3026331796bd45a6fcf1bb4dc1415eb5a400ed/species.txt).
 
 ## (1)a.Sexchromsome_alignment_merge.sh
-The case that the sex chromosome aligned to other homologues in other species.
+The case of the sex chromosome is aligned with other homologs in other species.
 ```
 used: sh a.Sexchromsome_alignment_merge.sh
-    - example/*.txt: the sex chromosome list and the homologues list in other species.
+    - example/*.txt: the sex chromosome list and the homologs list in other species.
 ```
 
 ## (2)b.Mergemaf_filter.sh
-Removed the repeat and cds region from maf file,the input dir structure and file name are the same as example example/maffilter.
+Removed the repeat and cds region from the maf file; the input dir structure and file name are the same as example/maffilter.
 
 ## (3)c.male_mutation_bias.sh
 Calculated the male mutation bias.
@@ -25,4 +25,7 @@ used: sh d.scale_sexdivergencetime.sh
 ```
 
 ## (5) e.SDR_gene_classification
-This directory is an example case to categorize genes on SDR into ancestral, gain and unknown
+This directory is an example case to categorise genes on SDR into ancestral, gain and unknown
+
+## (6) f.ancestral_expression_estimated.sh
+This script is designed for estimating ancestral expression levels.
