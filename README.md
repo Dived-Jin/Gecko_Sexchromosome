@@ -41,4 +41,4 @@ This pipeline (in [05.Sex_evolution](https://github.com/Dived-Jin/Gecko_Sexchrom
 5. Non-random sex chromosome evolution test([nonRandom_sexchromosome_evolution.sh](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/eb978283d0cedf755deb868efd83e29570673ffb/others/nonRandom_sexchromosome_evolution.sh))
 
 ## Note
-The Raw data and control file that were used in our work can be downloaded from Figureshare ([XXXX](XXXXX))
+The Raw data and control file that were used in our work can be downloaded from [Figureshare](https://figshare.com/s/31833ea74c36f3f36fdd)
