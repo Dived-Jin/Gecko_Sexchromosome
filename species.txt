@@ -14,7 +14,7 @@ phelsuma_laticauda	PHELAT
 Paroedura_picta	PARPIC
 paroedura_stumpffi	PARSTU
 christinus_marmoratus	CHRMAR
-gehyra_mutilata	GEHMUT
+gehyra_insulensis	GEHMUT
 hemidactylus_mabouia	HEMMAB
 hemidactylus_frenatus	HEMFRE
 heteronotia_binoei	HETBIN
