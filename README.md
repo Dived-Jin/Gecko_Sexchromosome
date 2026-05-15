@@ -39,6 +39,7 @@ This pipeline (in [05.Sex_evolution](https://github.com/Dived-Jin/Gecko_Sexchrom
 3. The dn, ds of gametologs estimated. ([Gametologues_dnds.sh](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/eb978283d0cedf755deb868efd83e29570673ffb/others/Gametologues_dnds.sh)) 
 4. Gene expression level calculated. ([RNAseq_TMPstat.sh](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/eb978283d0cedf755deb868efd83e29570673ffb/others/RNAseq_TMPstat.sh))
 5. Non-random sex chromosome evolution test([nonRandom_sexchromosome_evolution.sh](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/eb978283d0cedf755deb868efd83e29570673ffb/others/nonRandom_sexchromosome_evolution.sh))
-
+6. Dosage compensation ([Dosage_compensation.sh](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/main/others/Dosage_compensation.sh))
+7. Simulation and statistical test of temporal convergence of sex divergence time ([Sexchromosome_divergenceTime_simulation.r](https://github.com/Dived-Jin/Gecko_Sexchromosome/blob/main/others/Sexchromosome_divergenceTime_simulation.r)) 
 ## Note
 The Raw data and control file that were used in our work can be downloaded from [Figureshare](https://figshare.com/s/31833ea74c36f3f36fdd)
