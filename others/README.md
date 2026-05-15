@@ -39,3 +39,7 @@ The abbreviations in the document are represented the species name, which is fou
 ```
     used: Rscript bin/model_fitting.plusYW.r <inputfile> <outputfile> 
 ```
+(7) Simulation and statistical test of temporal convergence.
+```
+    used: Rscript Sexchromosome_divergenceTime_simulation.r
+```
