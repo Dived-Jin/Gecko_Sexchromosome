@@ -23,7 +23,7 @@ Creatdir $outdir
 runstepshell=${outdir}/work.sh 
 echo "cd $outdir " >$runstepshell
 node1k=`head -1 $alignf|awk '{for(i=1;i<=NF;i++) if($i == "'$node1'") print i"\t"i+2"\t"i+3}'`
-node2k=`head -1 $alignf|awk '{for(i=1;i<=NF;i++) if($i == "'$node1'") print i"\t"i+2"\t"i+3}'`
+node2k=`head -1 $alignf|awk '{for(i=1;i<=NF;i++) if($i == "'$node2'") print i"\t"i+2"\t"i+3}'`
 nodearr1=(${node1k// / })
 nodearr2=(${node2k// / })
 #echo $node1K
