@@ -17,7 +17,7 @@ do
 done
 
 ##########
-for i in nod*.gen.PQTREE;do name=`echo $i|awk -F "." '{print $1}'`; python $binpath/ancestral_karyotype_reorder.py ancestor_colorByAnc/$name.conv.len ${i}_k_PQTREE_HEUR.order;done
+for i in nod*.gen.PQTREE;do name=`echo $i|awk -F "." '{print $1}'`; python $binpath/ancestral_karyotype_reorder.py $i.gen.PQTREE ancestor_colorByAnc/$name.conv.len ${i}_k_PQTREE_HEUR.order;done
 ls *.PQTREE | while read i
 do
     perl $binpath/ancestral_seg_order.pl Conserved.Segments $i CORSAR-CORCIL-PYGNIG-NEPLEV-EUBMAC-COLBRE-SPHMIN-ARIPRA-THERAP-PHYWIR-TARMAU-PHELAT-PARSTU-CHRMAR-GEHMUT-HEMMAB-HEMFRE-HETBIN-GEKJAP-LACAGI-THAELE > $i.seg_tab
